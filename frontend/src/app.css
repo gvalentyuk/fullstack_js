@@ -1,0 +1,12 @@
+.app {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-content {
+    width: 80%;
+}
+
+.rating span {
+    padding: 0 2px;
+}
