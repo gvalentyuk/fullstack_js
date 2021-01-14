@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const dotenv = require('dotenv')
 const path = require('path')
 const { notFound, errorHandler} = require('./middleware/errorMiddleware')
@@ -9,6 +10,7 @@ dotenv.config()
 connectDB()
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 //Routes mount
 app.use('/api/products', require('./routes/products'))

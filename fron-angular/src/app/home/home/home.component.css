@@ -1,0 +1,128 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translateX(0.4em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translateX(-0.4em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heading-primary .heading-primary-main {
+  display: block;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.6em;
+  animation: moveInRight 1.2s ease-out;
+}
+
+.heading-primary .heading-primary-sub {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  animation: moveInLeft 1.2s ease-out;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+
+.heading-secondary:hover {
+  transform: skewX(10deg) skewY(7deg) scale(1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-tertiary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.header {
+  height: 80vh;
+  background-image: linear-gradient(to right bottom, rgba(46, 50, 48, 0.8), rgba(0, 0, 0, 0.8)), url("../../../assets/back.jpeg");
+  background-size: cover;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Home page products */
+.home__products {
+  background-color: #f7f7f7;
+  padding: 15rem 0;
+  margin-top: -20vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 800px) {
+  .home__products {
+    justify-content: space-around;
+    margin-top: -35vh;
+  }
+}

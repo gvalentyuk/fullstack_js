@@ -1,0 +1,53 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.register h4 {
+  color: #3f3d56;
+  font-weight: 500;
+  margin: 0 0 10px 5px;
+  letter-spacing: 0.2em;
+}
+
+.form-content form {
+  display: flex;
+  width: 20vw;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 15vh;
+}
+
+.register-back {
+  margin: 10vw 0 0 0;
+}
+
+.register-back img {
+  width: 40vw;
+}
+
+.register form button {
+  width: 100%;
+  height: 35px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  background: #3f3d56;
+  color: white;
+}
+
+.register form button:hover {
+  filter: brightness(110%);
+}
+
+.register .errors {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+}

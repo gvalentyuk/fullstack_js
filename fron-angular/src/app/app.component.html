@@ -1,0 +1,17 @@
+<nav>
+  <h3>E-Shop</h3>
+
+  <div class="links">
+    <a routerLink="/">Home</a>
+    <ng-container *ngIf="currentUser">
+      <a routerLink="cart">Cart</a>
+      <a routerLink="logout">Logout</a>
+    </ng-container>
+    <ng-container *ngIf="!currentUser">
+      <a routerLink="login">Sign In</a>
+      <a routerLink="register">Sign Up</a>
+    </ng-container>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

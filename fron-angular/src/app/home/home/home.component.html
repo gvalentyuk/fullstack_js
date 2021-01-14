@@ -1,0 +1,22 @@
+<header class="header">
+
+  <div class="header__text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary-main">DIMA GRABAR</span>
+      <span class="heading-primary-sub">the most popular gay in BRSU.</span>
+    </h1>
+
+  </div>
+
+</header>
+
+<div class="loader" *ngIf="loading">
+  <img src="../../../assets/loader.svg" alt="Loading...">
+</div>
+
+<div class="home__products" *ngIf="products.length">
+  <ng-container *ngFor="let product of products">
+    <app-product-item [product]="product"></app-product-item>
+  </ng-container>
+</div>
+

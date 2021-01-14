@@ -1,0 +1,68 @@
+.cart {
+  margin-top: 10vh;
+}
+
+.cart-empty h2 {
+  font-family: Montserrat;
+}
+
+.cart ul {
+  list-style: none;
+}
+
+.cart ul li {
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+
+.cart li .img-container {
+  width: 120px;
+  margin-right: 20px;
+}
+
+.cart li img {
+  width: 100%;
+}
+
+.cart-item__inf {
+  margin-right: 10vw;
+}
+
+.cart-item__name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.cart-item__price {
+  font-family: "Lato", sans-serif;
+}
+
+.cart-item__price a{
+  margin-left: 20px;
+}
+
+.cart-item__delete p{
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cart button {
+  margin-top: 15px;
+  width: 30%;
+  height: 45px;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  background: #3f3d56;
+  color: white;
+}
+
+.cart button:hover {
+  filter: brightness(110%);
+}

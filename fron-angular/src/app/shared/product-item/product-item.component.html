@@ -1,0 +1,9 @@
+<div class="product-item">
+  <img src="/assets{{product.image}}" alt="{{product.name}}">
+  <div class="product-item__inf">
+    <h3><a routerLink="/shop/{{product._id}}">{{product.name}}</a></h3>
+    <p class="product-item__category"><span class="product-item__bold">Category:</span> {{product.category}}</p>
+    <p class="product-item__price"><span class="product-item__bold">In Count:</span> {{!!product.countInStock}}
+      <span>${{product.price}}</span></p>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+nav {
+  width: 80vw;
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+nav h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav .links {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav .links a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  nav .links {
+    width: 40%;
+    font-size: 0.9em;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  nav .links {
+    width: 60%;
+    font-size: 0.9em;
+  }
+}

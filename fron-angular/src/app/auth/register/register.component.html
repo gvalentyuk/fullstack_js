@@ -1,0 +1,33 @@
+<div class="register">
+  <div class="form-content">
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <h4>Sign Up</h4>
+      <app-input [control]="registerForm.get('name')" placeholder="Name" inputType="text"
+                 controlType="input"></app-input>
+      <app-input [control]="registerForm.get('email')" placeholder="Email" inputType="text"
+                 controlType="input"></app-input>
+      <app-input [control]="registerForm.get('password')" placeholder="Password" inputType="password"
+                 controlType="input"></app-input>
+      <app-input [control]="registerForm.get('confirmPassword')" placeholder="Confirm Password" inputType="password"
+                 controlType="input"></app-input>
+      <div
+        *ngIf="
+        registerForm.get('password').touched &&
+        registerForm.get('confirmPassword').touched &&
+        registerForm.errors
+      "
+        class="errors"
+      >
+        <p class="error" *ngIf="registerForm.errors.passwordsDontMatch">
+          Password's dont match.
+        </p>
+        <p *ngIf="registerForm.errors.noConnection">No Internet connection.</p>
+        <p *ngIf="registerForm.errors.anotherError">Failure sign up.</p>
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  <div class="register-back">
+    <img src="../../../assets/register.svg" alt="login">
+  </div>
+</div>

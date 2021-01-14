@@ -13,13 +13,11 @@ exports.protect = asyncHandler(async (req, res, next) => {
             next()
         } catch (e) {
             console.log(e)
-            res.status(401)
-            throw new Error('Не авторизованы')
+            return res.status(401)
         }
     }
 
     if (!token) {
-        res.status(401)
-        throw new Error('Не авторизованы')
+        return res.status(401).json({error: 'Not authorized'})
     }
 })

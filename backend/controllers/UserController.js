@@ -40,7 +40,7 @@ exports.getProfile = asyncHandler(async (req, res, next) => {
 })
 
 
-//@route    POST /api/user/profile
+//@route    POST /api/user/registration
 //@access   Public
 //@desc     Create profile
 exports.register = asyncHandler(async (req, res, next) => {

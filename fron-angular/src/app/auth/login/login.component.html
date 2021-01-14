@@ -1,0 +1,13 @@
+<div class="login">
+  <div class="form-content">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <h4>Sign In</h4>
+      <app-input [control]="loginForm.get('email')" placeholder="Email" inputType="text" controlType="input"></app-input>
+      <app-input [control]="loginForm.get('password')" placeholder="Password" inputType="password" controlType="input"></app-input>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+  <div class="login-back">
+    <img src="../../../assets/login.svg" alt="login">
+  </div>
+</div>

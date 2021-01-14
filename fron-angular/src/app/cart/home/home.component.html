@@ -1,0 +1,22 @@
+<div class="cart">
+  <div *ngIf="!cart.length" class="cart-empty">
+    <h2>Cart is empty.</h2>
+  </div>
+  <ng-container *ngIf="cart.length">
+    <ul>
+      <li *ngFor="let item of cart">
+        <div class="img-container">
+          <img src="/assets{{item.image}}" alt="{{item.name}}">
+        </div>
+        <div class="cart-item__inf">
+          <p class="cart-item__name">{{item.name}}</p>
+          <p class="cart-item__price">${{item.price}} <a [routerLink]="'/shop/'+item._id">Check product</a></p>
+        </div>
+        <div class="cart-item__delete">
+          <p (click)="delete(item)">&#10005;</p>
+        </div>
+      </li>
+    </ul>
+    <button>Pay</button>
+  </ng-container>
+</div>

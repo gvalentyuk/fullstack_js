@@ -7,7 +7,6 @@ router.route('/registration').post(register)
 router.route('/login').post(login)
 router.route('/profile').get(protect, getProfile)
 router.route('/cart').get(protect, fetchCart)
-router.route('/cart').put(protect, addToCart).get(protect, fetchCart)
 router.route('/cart/add').put(protect, addToCart)
 router.route('/cart/remove').put(protect, removeFromCart)
 

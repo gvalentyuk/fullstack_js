@@ -1,0 +1,24 @@
+<div class="product-page">
+  <ng-container *ngIf="product">
+    <div class="product">
+      <div class="product__image-container">
+        <img src="http://localhost:4200/assets{{product.image}}" alt="{{product.name}}">
+      </div>
+      <div class="product__inf-container">
+        <h3>{{product.name}}</h3>
+        <p class="brand"><span class="bold">Brand:</span> {{product.brand}}</p>
+        <p class="category"><span class="bold">Category:</span> {{product.category}}</p>
+        <p class="rating"><span class="bold">Rating:</span> {{product.rating.toFixed(1)}} out of 5</p>
+        <p class="price"><span class="bold">Price:</span> ${{product.price}}</p>
+        <p class="description">{{product.description}}</p>
+        <button *ngIf="!user" title="Cart available only for authorized users" [disabled]="true" class="disabled">Add To
+          Cart
+        </button>
+        <button (click)="addToCart(product)" *ngIf="user">Add To Cart</button>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="loading">
+    <img src="../../../assets/loader.svg" alt="">
+  </ng-container>
+</div>
