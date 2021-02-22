@@ -36,7 +36,7 @@ const startRemoveFromCart = ()  => ({
 
 const failureRemoveFromCart = error  => ({
     type: cartActionsTypes.FAILURE_REMOVE_FROM_CART,
-    payloa: error
+    payload: error
 })
 
 const successRemoveFromCart = cart => ({
